@@ -19,7 +19,6 @@ buildGoModule rec {
   meta = with lib; {
     description = "Semantic Version Util";
     homepage = "https://github.com/caarlos0/svu";
-    maintainers = with maintainers; [ caarlos0 ];
     license = licenses.mit;
   };
 }
