@@ -12,6 +12,9 @@ buildGoModule rec {
 
   vendorSha256 = "sha256-RFJTBfsfEyKn9OSvE2HLgjKiJC3Hs90+P9rm5GlIseo=";
 
+  ldflags =
+    [ "-s" "-w" "-X=main.version=${version}" "-X=main.builtBy=nixpkgs" ];
+
   meta = with lib; {
     description = "Discord's Rich Presence from Apple Music";
     homepage = "https://github.com/caarlos0/discord-applemusic-rich-presence";

@@ -17,6 +17,7 @@
   discord-applemusic-rich-presence =
     pkgs.callPackage ./pkgs/discord-applemusic-rich-presence { };
   fork-cleaner = pkgs.callPackage ./pkgs/fork-cleaner { };
+  jsonfmt = pkgs.callPackage ./pkgs/jsonfmt { };
   svu = pkgs.callPackage ./pkgs/svu { };
 
   # some-qt5-package = pkgs.libsForQt5.callPackage ./pkgs/some-qt5-package { };
