@@ -14,7 +14,11 @@
   modules = import ./modules; # NixOS modules
   overlays = import ./overlays; # nixpkgs overlays
 
-  example-package = pkgs.callPackage ./pkgs/example-package { };
+  discord-applemusic-rich-presence =
+    pkgs.callPackage ./pkgs/discord-applemusic-rich-presence { };
+  fork-cleaner = pkgs.callPackage ./pkgs/fork-cleaner { };
+  svu = pkgs.callPackage ./pkgs/svu { };
+
   # some-qt5-package = pkgs.libsForQt5.callPackage ./pkgs/some-qt5-package { };
   # ...
 }
