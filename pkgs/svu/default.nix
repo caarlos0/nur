@@ -1,4 +1,4 @@
-{ lib, buildGoModule, fetchFromGitHub, testers, svu }:
+{ lib, buildGoModule, fetchFromGitHub, ... }:
 
 buildGoModule rec {
   pname = "svu";
@@ -15,13 +15,6 @@ buildGoModule rec {
 
   ldflags =
     [ "-s" "-w" "-X=main.version=${version}" "-X=main.builtBy=nixpkgs" ];
-
-  # test assumes source directory to be a git repository
-  postPatch = ''
-    rm internal/git/git_test.go
-  '';
-
-  passthru.tests.version = testers.testVersion { package = svu; };
 
   meta = with lib; {
     description = "Semantic Version Util";
