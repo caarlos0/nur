@@ -1,5 +1,4 @@
-{ lib, buildGoModule, fetchFromGitHub, ... }:
-
+{ buildGoModule, fetchFromGitHub, lib, ... }:
 buildGoModule rec {
   pname = "svu";
   version = "1.10.2";
@@ -12,6 +11,11 @@ buildGoModule rec {
   };
 
   vendorHash = "sha256-+e1oL08KvBSNaRepGR2SBBrEDJaGxl5V9rOBysGEfQs=";
+
+  # test assumes source directory to be a git repository
+  postPatch = ''
+    rm internal/git/git_test.go
+  '';
 
   ldflags =
     [ "-s" "-w" "-X=main.version=${version}" "-X=main.builtBy=nixpkgs" ];
