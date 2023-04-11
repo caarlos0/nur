@@ -14,6 +14,7 @@
   modules = import ./modules; # NixOS modules
   overlays = import ./overlays; # nixpkgs overlays
 
+  clone-org = pkgs.callPackage ./pkgs/clone-org { };
   discord-applemusic-rich-presence =
     pkgs.callPackage ./pkgs/discord-applemusic-rich-presence { };
   fork-cleaner = pkgs.callPackage ./pkgs/fork-cleaner { };
