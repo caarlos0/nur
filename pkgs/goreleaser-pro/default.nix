@@ -12,11 +12,11 @@ let
 
   # Use `print-hashes.sh $version` to generate the list below
   suffixToHash = {
-    # Use `print-hashes.sh` to generate the list below
-    Linux_x86_64 = "1fv8prygaridk6qpr78x91m6jxy00a6f5gdanzih8kgizk11rxip";
-    Linux_arm64 = "0s28lkvvxaq3wvmdiy1j3i7i2pfsw77ywb9nkb7163z7jr8i5hh5";
-    Darwin_x86_64 = "14g32bii6s6ypg8l3cpf3rz3fa3pa28s6bmzipgblcic71cwwy8p";
-    Darwin_arm64 = "0y67ssyf26gj3l6g31hd6khbx44627n8d9cc65fnz19q27a1rqfv";
+    Linux_x86_64 = "1cj45nilnn76l9ca6w7dagx18yrk9979kyw17j00s25hk7wsb50i";
+    Linux_arm64 = "18vyi63vfp76cralrgdf4i30lx8z84whmhym822avzx5l8681cva";
+    Darwin_x86_64 = "01x3p3a7530prv2q7qvip9fslavifav1ky7zmmax2g2bqhmwazis";
+    Darwin_arm64 = "17l0mqgp73bpdcz3xsfimdb31bmr8xsp3f9z1n3wzfqklhb51p7b";
+
   };
 
   mapPlatformToArchitecture = platform:
@@ -26,7 +26,7 @@ let
     }.${platform.parsed.cpu.name} or (throw
       "Unsupported CPU ${platform.parsed.cpu.name}");
 
-  version = "v1.17.0";
+  version = "v1.17.1";
 
   mapPlatformToSuffix = platform:
     "${mapPlatformToName platform}_${mapPlatformToArchitecture platform}";
