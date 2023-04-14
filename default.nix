@@ -21,6 +21,7 @@
   jsonfmt = pkgs.callPackage ./pkgs/jsonfmt { };
   svu = pkgs.callPackage ./pkgs/svu { };
   goreleaser-pro = pkgs.callPackage ./pkgs/goreleaser-pro { };
+  goreleaser = pkgs.callPackage ./pkgs/goreleaser { };
 
   # some-qt5-package = pkgs.libsForQt5.callPackage ./pkgs/some-qt5-package { };
   # ...
