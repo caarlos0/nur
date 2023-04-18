@@ -12,11 +12,10 @@ let
 
   # Use `print-hashes.sh $version` to generate the list below
   suffixToHash = {
-    Linux_x86_64 = "1cj45nilnn76l9ca6w7dagx18yrk9979kyw17j00s25hk7wsb50i";
-    Linux_arm64 = "18vyi63vfp76cralrgdf4i30lx8z84whmhym822avzx5l8681cva";
-    Darwin_x86_64 = "01x3p3a7530prv2q7qvip9fslavifav1ky7zmmax2g2bqhmwazis";
-    Darwin_arm64 = "17l0mqgp73bpdcz3xsfimdb31bmr8xsp3f9z1n3wzfqklhb51p7b";
-
+    Linux_x86_64 = "1rh3s7hsx10r327a38rzfqwnf9kw2gczqiq4nlnzzmif17njydfa";
+    Linux_arm64 = "0yl9yvzs101dk1szcr1nxp09y2vadxzp88byp6j6d0wavxzv9za0";
+    Darwin_x86_64 = "0prk79s821pi90qkvj5firpq7cnr52g7ngkivvimdpjq8qkmbpfd";
+    Darwin_arm64 = "0rh1i3vyig8g8h71qs8lraknsx7vgwxgq06q6xjcswzzs6zwcrrn";
   };
 
   mapPlatformToArchitecture = platform:

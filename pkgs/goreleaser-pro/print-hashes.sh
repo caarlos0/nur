@@ -1,4 +1,4 @@
-#!/usr/local/env bash
+#!/usr/bin/env bash
 version=$1
 base="https://github.com/goreleaser/goreleaser-pro/releases/download"
 
