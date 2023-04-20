@@ -18,11 +18,9 @@
   discord-applemusic-rich-presence =
     pkgs.callPackage ./pkgs/discord-applemusic-rich-presence { };
   fork-cleaner = pkgs.callPackage ./pkgs/fork-cleaner { };
+  gocovsh = pkgs.callPackage ./pkgs/gocovsh { };
+  goreleaser = pkgs.callPackage ./pkgs/goreleaser { };
+  goreleaser-pro = pkgs.callPackage ./pkgs/goreleaser-pro { };
   jsonfmt = pkgs.callPackage ./pkgs/jsonfmt { };
   svu = pkgs.callPackage ./pkgs/svu { };
-  goreleaser-pro = pkgs.callPackage ./pkgs/goreleaser-pro { };
-  goreleaser = pkgs.callPackage ./pkgs/goreleaser { };
-
-  # some-qt5-package = pkgs.libsForQt5.callPackage ./pkgs/some-qt5-package { };
-  # ...
 }
