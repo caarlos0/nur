@@ -25,7 +25,7 @@ let
     }.${platform.parsed.cpu.name} or (throw
       "Unsupported CPU ${platform.parsed.cpu.name}");
 
-  version = "v1.17.1";
+  version = "v1.17.2";
 
   mapPlatformToSuffix = platform:
     "${mapPlatformToName platform}_${mapPlatformToArchitecture platform}";
