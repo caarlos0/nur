@@ -23,4 +23,5 @@
   goreleaser-pro = pkgs.callPackage ./pkgs/goreleaser-pro { };
   jsonfmt = pkgs.callPackage ./pkgs/jsonfmt { };
   svu = pkgs.callPackage ./pkgs/svu { };
+  xdg-open-svc = pkgs.callPackage ./pkgs/xdg-open-svc { };
 }
