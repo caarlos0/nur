@@ -2,13 +2,13 @@
 { buildGoModule, fetchFromGitHub, lib, ... }:
 buildGoModule rec {
   pname = "xdg-open-svc";
-  version = "0.1.0";
+  version = "0.1.1";
 
   src = fetchFromGitHub {
     owner = "caarlos0";
     repo = "xdg-open-svc";
     rev = "v${version}";
-    sha256 = "sha256-20UljWuWNwiLz3A+4jDucW7j4+8MHA4i4JENRoxH/qc=";
+    sha256 = "sha256-x6A6Fa2IRJKw9uAF7CmVbj4q8+LScaVnXPJ79fSBjY8=";
   };
 
   vendorSha256 = "sha256-qaHsTivC4hgdznEWSKQWKmGEkmeKwIz+0h1PIzYVVm8=";
