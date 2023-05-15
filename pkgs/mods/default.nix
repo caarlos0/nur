@@ -35,5 +35,5 @@ in pkgs.stdenv.mkDerivation {
     cp -vr ./mods $out/bin/mods
   '';
 
-  system = builtins.currentSystem;
+  system = system;
 }
