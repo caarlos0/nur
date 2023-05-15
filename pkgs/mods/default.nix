@@ -1,4 +1,4 @@
-{ stdenv, fetchurl, installShellFiles }:
+{ pkgs, fetchurl, installShellFiles }:
 let
   shaMap = {
     x86_64-linux = "0yzzl33bp43wplhr52m0x8xyi7v3xmkjylhw192h7kg02zrx0pvw";
@@ -17,7 +17,7 @@ let
     aarch64-darwin =
       "https://github.com/charmbracelet/mods/releases/download/v0.1.1/mods_Darwin_arm64.tar.gz";
   };
-in stdenv.mkDerivation {
+in pkgs.stdenv.mkDerivation {
   pname = "mods";
   version = "0.1.1";
   src = fetchurl {
