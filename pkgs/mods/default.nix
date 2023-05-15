@@ -17,13 +17,12 @@ let
     aarch64-darwin =
       "https://github.com/charmbracelet/mods/releases/download/v0.1.1/mods_Darwin_arm64.tar.gz";
   };
-  system = builtins.currentSystem;
 in stdenv.mkDerivation {
   pname = "mods";
   version = "0.1.1";
   src = fetchurl {
-    url = urlMap.${system};
-    sha256 = shaMap.${system};
+    url = urlMap.${builtins.currentSystem};
+    sha256 = shaMap.${builtins.currentSystem};
   };
 
   sourceRoot = ".";
@@ -35,5 +34,5 @@ in stdenv.mkDerivation {
     cp -vr ./mods $out/bin/mods
   '';
 
-  system = system;
+  system = builtins.currentSystem;
 }
