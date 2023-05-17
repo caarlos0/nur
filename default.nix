@@ -23,6 +23,7 @@
   goreleaser-pro = pkgs.callPackage ./pkgs/goreleaser-pro { };
   jsonfmt = pkgs.callPackage ./pkgs/jsonfmt { };
   mods = pkgs.callPackage ./pkgs/mods { };
+  org-stats = pkgs.callPackage ./pkgs/org-stats { };
   svu = pkgs.callPackage ./pkgs/svu { };
   xdg-open-svc = pkgs.callPackage ./pkgs/xdg-open-svc { };
 }
