@@ -19,8 +19,6 @@
     pkgs.callPackage ./pkgs/discord-applemusic-rich-presence { };
   fork-cleaner = pkgs.callPackage ./pkgs/fork-cleaner { };
   gocovsh = pkgs.callPackage ./pkgs/gocovsh { };
-  goreleaser = pkgs.callPackage ./pkgs/goreleaser { };
-  goreleaser-pro = pkgs.callPackage ./pkgs/goreleaser-pro { };
   jsonfmt = pkgs.callPackage ./pkgs/jsonfmt { };
   mods = pkgs.callPackage ./pkgs/mods { };
   org-stats = pkgs.callPackage ./pkgs/org-stats { };
