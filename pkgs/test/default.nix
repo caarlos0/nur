@@ -2,8 +2,8 @@
 { system ? builtins.currentSystem, pkgs, lib, fetchurl, installShellFiles }:
 let
   shaMap = {
-    x86_64-linux = "02qyz9vq2h63j1rvzcpi20dm6kp96g1ljhb5phrkb78ygmggl6gb";
-    x86_64-darwin = "0cspbg81z67sna25v68nvsh8n006hdcp1i3sx3yd6yjglc50vxzs";
+    x86_64-linux = "0qwm1jv8sjz50qssmr82597yfp08ypwfy4qi2xfdra1cqk3dfkgp";
+    x86_64-darwin = "1qzmp2apsh1nbzcwgk6kac14rn46qk9s2dmmr1x4f79lx045n2p9";
   };
 
   urlMap = {
