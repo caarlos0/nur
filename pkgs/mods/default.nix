@@ -17,7 +17,8 @@ let
     aarch64-darwin =
       "https://github.com/charmbracelet/mods/releases/download/v0.1.1/mods_Darwin_arm64.tar.gz";
   };
-in pkgs.stdenv.mkDerivation {
+in
+pkgs.stdenv.mkDerivation {
   pname = "mods";
   version = "0.1.1";
   src = fetchurl {
