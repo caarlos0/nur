@@ -1,9 +1,9 @@
 { lib
-, buildPythonPackage
+, python3
 , fetchFromGitHub
 }:
 
-buildPythonPackage {
+python3.pkgs.buildPythonPackage {
   pname = "mkdocs-rss-plugin";
   version = "1.8.0";
 

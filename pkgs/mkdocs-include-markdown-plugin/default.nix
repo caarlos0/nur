@@ -1,12 +1,12 @@
 { lib
-, buildPythonPackage
+, python3
 , fetchFromGitHub
 , hatchling
 , mkdocs
 , wcmatch
 }:
 
-buildPythonPackage rec {
+python3.pkgs.buildPythonPackage rec {
   pname = "mkdocs-include-markdown-plugin";
   version = "6.0.4";
 
