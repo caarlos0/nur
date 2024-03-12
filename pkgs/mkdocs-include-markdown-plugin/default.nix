@@ -16,6 +16,7 @@ python3.pkgs.buildPythonPackage rec {
     python = "py3";
   };
 
+  propagatedBuildInputs = [ python3.pkgs.wcmatch ];
 
   meta = with lib; {
     description = "Mkdocs Markdown includer plugin";
