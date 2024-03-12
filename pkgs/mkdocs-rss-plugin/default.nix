@@ -5,16 +5,17 @@
 
 python3.pkgs.buildPythonPackage {
   pname = "mkdocs-rss-plugin";
-  version = "1.8.0";
+  version = "1.12.1";
 
   src = fetchFromGitHub {
     owner = "Guts";
     repo = "mkdocs-rss-plugin";
-    rev = "1.8.0";
-    sha256 = "sha256-rCz1Uk5uqIsnIWw0b1oBsjAO6aK/tpVgqAX/8dVnAGw=";
+    rev = "1.12.1";
+    sha256 = "sha256-cLQfhMYW/9Eb+IamQIC7fZRTm/ORD8xbcrmKkSkUrMs=";
   };
 
 
+  nativeBuildInputs = [ python3.pkgs.mkdocs ];
   doCheck = false;
 
   meta = with lib; {
