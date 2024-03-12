@@ -1,9 +1,6 @@
 { lib
 , python3
 , fetchFromGitHub
-, hatchling
-, mkdocs
-, wcmatch
 }:
 
 python3.pkgs.buildPythonPackage rec {
@@ -18,8 +15,8 @@ python3.pkgs.buildPythonPackage rec {
   };
 
   pyproject = true;
-  nativeBuildInputs = [ hatchling mkdocs ];
-  propagatedBuildInputs = [ wcmatch ];
+  nativeBuildInputs = [ python3.pkgs.hatchling python3.pkgs.mkdocs ];
+  propagatedBuildInputs = [ python3.pkgs.wcmatch ];
 
   meta = with lib; {
     description = "Mkdocs Markdown includer plugin";
