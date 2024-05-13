@@ -23,6 +23,6 @@ python3.pkgs.buildPythonPackage rec {
     homepage = "https://github.com/mondeja/mkdocs-include-markdown-plugin";
     license = licenses.asl20;
     maintainers = with maintainers; [ caarlos0 ];
-    changelog = "https://github.com/mondeja/mkdocs-include-markdown-plugin/releases/tag/${src.rev}";
+    changelog = "https://github.com/mondeja/mkdocs-include-markdown-plugin/releases/tag/v${version}";
   };
 }
