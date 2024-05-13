@@ -21,7 +21,7 @@ buildGoModule {
     description = "Unicode symbols on the command line";
     homepage = "https://github.com/maaslalani/glyphs";
     changelog = "https://github.com/maaslalani/glyphs/commits";
-    # maintainers = with maintainers; [ caarlos0 ];
+    maintainers = with maintainers; [ caarlos0 ];
     mainProgram = "glyphs";
   };
 }

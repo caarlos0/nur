@@ -22,7 +22,7 @@ buildGoModule {
     description = "Correct commonly misspelled English words in source files";
     homepage = "https://github.com/golangci/misspell";
     changelog = "https://github.com/golangci/misspell/commits";
-    # maintainers = with maintainers; [ caarlos0 ];
+    maintainers = with maintainers; [ caarlos0 ];
     mainProgram = "misspell";
   };
 }
