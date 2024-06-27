@@ -21,5 +21,5 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
           commit_message: "chore(nix): update"
-          branch: main
+          branch: master
           file_pattern: flake.lock
