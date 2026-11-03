@@ -9,22 +9,22 @@
 let
   inherit (stdenvNoCC.hostPlatform) system;
   shaMap = {
-    x86_64-linux = "0pkhl40a2xfbb7xba6khdkd8cqg3lzzxhkfqxjqg933xvc74zzpr";
-    aarch64-linux = "1szh4ccz8n5dhnkd66idf010r2qjjcxf8r18zq8vhckmlqfzv3ms";
-    x86_64-darwin = "1asagizlgxmrxhsq2wrz7lp6d5f21wl0mbmkm23ggppdwfjk85gg";
-    aarch64-darwin = "1asagizlgxmrxhsq2wrz7lp6d5f21wl0mbmkm23ggppdwfjk85gg";
+    x86_64-linux = "1qrhw57hqcsjq566kjjr54sdyjqm0hzmqvw2gmb13ykjcd191fsz";
+    aarch64-linux = "1prpi9aficw1gz4mhbr970w84p90fxbbk8wcm6myvb28krr3dqqk";
+    x86_64-darwin = "1s22mb7da344m3hz9yr2xaagpmm53l38dcimyj6v23qjnws7nqn3";
+    aarch64-darwin = "1s22mb7da344m3hz9yr2xaagpmm53l38dcimyj6v23qjnws7nqn3";
   };
 
   urlMap = {
-    x86_64-linux = "https://github.com/caarlos0/svu/releases/download/v3.4.0/svu_3.4.0_linux_amd64.tar.gz";
-    aarch64-linux = "https://github.com/caarlos0/svu/releases/download/v3.4.0/svu_3.4.0_linux_arm64.tar.gz";
-    x86_64-darwin = "https://github.com/caarlos0/svu/releases/download/v3.4.0/svu_3.4.0_darwin_all.tar.gz";
-    aarch64-darwin = "https://github.com/caarlos0/svu/releases/download/v3.4.0/svu_3.4.0_darwin_all.tar.gz";
+    x86_64-linux = "https://github.com/caarlos0/svu/releases/download/v3.4.3/svu_3.4.3_linux_amd64.tar.gz";
+    aarch64-linux = "https://github.com/caarlos0/svu/releases/download/v3.4.3/svu_3.4.3_linux_arm64.tar.gz";
+    x86_64-darwin = "https://github.com/caarlos0/svu/releases/download/v3.4.3/svu_3.4.3_darwin_all.tar.gz";
+    aarch64-darwin = "https://github.com/caarlos0/svu/releases/download/v3.4.3/svu_3.4.3_darwin_all.tar.gz";
   };
 in
 stdenvNoCC.mkDerivation {
   pname = "svu";
-  version = "3.4.0";
+  version = "3.4.3";
   src = fetchurl {
     url = urlMap.${system};
     sha256 = shaMap.${system};
@@ -35,10 +35,12 @@ stdenvNoCC.mkDerivation {
   nativeBuildInputs = [ installShellFiles ];
 
   installPhase = ''
+    runHook preInstall
     mkdir -p $out/bin
     cp -vr ./svu $out/bin/svu
     installShellCompletion ./completions/*
     installManPage ./manpages/svu.1.gz
+    runHook postInstall
   '';
 
   meta = {
